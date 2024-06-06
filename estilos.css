@@ -1,0 +1,338 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Raleway", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    background-color: #ebdee6;
+    margin: 0;
+    padding: 0;
+}
+
+.logo-whatsapp {
+    width: 45px;
+    height: auto;
+    object-fit: cover;
+    margin-bottom: 0px;
+    float: right;
+}
+
+.imagenquetodavianotienelugar,
+.studioveintidosimg,
+.imagenparapartadonosotras {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    text-align: center;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+    padding: 20px;
+}
+
+.titulo-principal {
+    text-align: center;
+    margin-top: 60px;
+    font-size: 45px;
+    color: #111111;
+    margin-bottom: 60px;
+}
+
+header {
+    background-color: #ebdee6;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    font-size: 30px;
+    color: #111111;
+}
+
+nav {
+    grid-column: 2;
+    justify-self: end;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 15px;
+    color: #111111;
+    font-size: 14px;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+    padding: 20px;
+}
+
+footer {
+    background-color: #f0f0f0;
+    padding: 10px;
+    text-align: center;
+}
+
+.menu-bar {
+    background-color: #8a2be2;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+    display: none;
+}
+
+.menu-bar.active {
+    display: block;
+}
+
+.menu-bar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-bar ul li {
+    margin-bottom: 10px;
+}
+
+.menu-bar ul li a {
+    font-size: 16px;
+    color: #fff;
+    text-decoration: none;
+}
+
+#logo {
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+    line-height: 1;
+    letter-spacing: 16px;
+}
+
+h2 {
+    font-size: 24px;
+    color: #000000;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+h3 {
+    font-size: 18px;
+    color: #000000;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+p {
+    padding: 15px;
+    background-color: #e4cfdc;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 18px;
+    color: #000000;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    text-align: start;
+}
+
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+}
+
+form div {
+    margin-bottom: 20px;
+}
+
+form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+form input[type="text"],
+form input[type="tel"],
+form input[type="email"],
+form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+form textarea {
+    resize: vertical;
+}
+
+form button {
+    background-color: #8a2be2;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+input:required:invalid,
+textarea:required:invalid {
+    border-color: rgb(236, 186, 243);
+}
+
+input:required:valid,
+textarea:required:valid {
+    border-color: green;
+}
+
+.menu-icon {
+    display: none;
+    cursor: pointer;
+}
+
+/* Responsive Styles */
+@media screen and (min-width: 768px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    header {
+        grid-template-columns: auto auto auto;
+        justify-items: center;
+    }
+
+    #logo,
+    nav {
+        margin-bottom: 0;
+    }
+
+    .menu-bar ul {
+        flex-direction: row;
+    }
+
+    .menu-bar {
+        display: none;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    header {
+        grid-template-columns: 1fr auto 1fr;
+        justify-items: center;
+    }
+
+    .menu-bar {
+        display: none;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .menu-bar {
+        display: block;
+    }
+
+    .menu-bar ul {
+        flex-direction: column;
+    }
+}
+
+/* Grid layout for the gallery */
+.galeria {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+    padding: 10px;
+}
+
+.galeria img {
+    width: 100%;
+    height: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+@media (min-width: 768px) {
+    .galeria {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .galeria {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.contenido {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.studioveintidosimg {
+    max-width: 300px;
+    height: auto;
+}
+
+.texto p {
+    font-size: 16px;
+}
+
+@media (max-width: 768px) {
+    .contenido {
+        grid-template-columns: 1fr;
+    }
+
+    .texto {
+        text-align: center;
+    }
+
+    .texto p {
+        font-size: 14px;
+    }
+}

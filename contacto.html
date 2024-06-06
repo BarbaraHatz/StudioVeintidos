@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contácto</title>
+    <link rel="stylesheet" href="estilos.css">    
+    
+</head>
+<body>
+    <header>
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="sobrenosotras.html">Nosotras</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="contacto.html">Contácto</a></li>
+                <li><a href="galeria.html">Galería</a></li>
+            </ul>
+        </nav>
+        </nav>
+    </header>
+    
+    <h2>Contácto</h2> 
+     
+       
+        <form action="enviar.php" method="post">
+            <div>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+            </div>
+            <div>
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono">
+            </div>
+            <div>
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div>
+                <label for="mensaje">¿En qué podemos ayudarte?</label>
+                <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+            </div>
+            <button type="submit">Enviar</button>
+        </form>
+
+        <img src="imagenes/imagenquetodavianotienelugar.jpeg" alt="Imágen modelos" class="imagenquetodavianotienelugar"shrink-to-fit-no,>
+
+        <a href="https://wa.me/+5491134654537">
+        </a>
+        <img src="imagenes/logo-whatsapp.png" alt="Logo de Whatsapp" class="logo-whatsapp"shrink-to-fit-no,>
+        
+
+</body>
+</html>
